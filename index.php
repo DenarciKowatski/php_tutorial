@@ -23,7 +23,7 @@ $res = $x % $y;
 print $res;
 */
 //IoTTecnologia@2019!
-
+/*
 $x = 10;
 $y = 3;
 
@@ -55,4 +55,23 @@ echo "\n";
 $j = [1,2,3,4,5,6,10];
 foreach ($j as $k){
     echo $k;
+}*/
+//define a pagina atual pela URL
+$pagina = 'homke';
+if (isset($_GET['pagina'])){
+    $pagina = $_GET['pagina'];
 }
+//Carrega pagina header
+include 'header.php';
+
+//carrega pagina escolhida
+switch ($pagina){
+    case 'equipe':
+        include 'equipe.php';
+        break;
+    default:
+        include 'app/views/home.php';
+        break;
+}
+//carrega footer
+include 'footer.php';
