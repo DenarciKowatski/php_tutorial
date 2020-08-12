@@ -70,7 +70,7 @@ switch ($pagina){
         include 'equipe.php';
         break;
     default:
-        include 'app/views/home.php';
+        include 'home.php';
         break;
 }
 //carrega footer
